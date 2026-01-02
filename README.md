@@ -1,4 +1,4 @@
-# 📈 Volatility Surface Lab
+# 📈 Arbitrage Free Volatility Surface
 
 **Arbitrage-free volatility surface construction, calibration, and analysis toolkit**
 
