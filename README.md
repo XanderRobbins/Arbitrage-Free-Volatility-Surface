@@ -20,10 +20,10 @@ A production-grade Python library for computing implied volatilities, enforcing 
 ## 📊 Example Visualizations
 
 ### Volatility Smile
-![Volatility Smile](images/volitility_Smile.png)
+![Volatility Smile](images/Volitility_Smile.png)
 
 ### 3D Surface
-![3D Surface](images/volitility_Surface.png)
+![3D Surface](images/Volitility_Surface.png)
 
 ---
 
@@ -188,12 +188,6 @@ volatility-surface-lab/
 │   ├── test_svi.py
 │   ├── test_heston.py
 │   └── test_pricing.py
-│
-├── notebooks/                # Example notebooks
-│   ├── 01_iv_computation.ipynb
-│   ├── 02_svi_fitting.ipynb
-│   ├── 03_heston_calibration.ipynb
-│   └── 04_full_pipeline.ipynb
 │
 ├── data/                     # Sample data
 │   └── spy_options.csv
