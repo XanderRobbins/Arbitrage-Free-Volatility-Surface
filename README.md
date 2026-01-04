@@ -1,4 +1,4 @@
-# 📈 Arbitrage Free Volatility Surface
+# Arbitrage Free Volatility Surface
 
 ![Python](https://img.shields.io/badge/python-3.11-blue.svg)
 ![Tests](https://img.shields.io/badge/tests-104%20passing-brightgreen.svg)
@@ -11,7 +11,7 @@ A production-grade Python library for computing implied volatilities, enforcing 
 
 ---
 
-## 🚀 Features
+## Features
 
 - **Robust IV Computation**: Newton-Raphson + Brent's method fallback for deep ITM/OTM options
 - **Static Arbitrage Checks**: Put-call parity, butterfly spreads, calendar arbitrage
@@ -22,7 +22,7 @@ A production-grade Python library for computing implied volatilities, enforcing 
 
 ---
 
-## 📊 Example Visualizations
+## Example Visualizations
 
 ### Volatility Smile
 ![Volatility Smile](images/Volitility_Smile.png)
@@ -32,7 +32,7 @@ A production-grade Python library for computing implied volatilities, enforcing 
 
 ---
 
-## 📦 Installation
+## Installation
 
 ### From Source (Development)
 
@@ -56,7 +56,7 @@ pip install -e ".[fast]"
 
 ---
 
-## 🎯 Quick Start
+## Quick Start
 
 ### Minimal Example
 
@@ -90,7 +90,7 @@ surface.summary()
 
 ---
 
-## 📊 Complete Workflow
+## Complete Workflow
 
 ### 1. Load Market Data
 
@@ -173,7 +173,7 @@ surface.summary()
 
 ---
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 volatility-surface-lab/
@@ -204,7 +204,7 @@ volatility-surface-lab/
 
 ---
 
-## 🧪 Testing
+## Testing
 
 ```bash
 # Run all tests
@@ -219,7 +219,7 @@ pytest tests/test_iv_solver.py -v
 
 ---
 
-## 📚 Mathematical Background
+## Mathematical Background
 
 ### Implied Volatility
 
@@ -257,7 +257,7 @@ Pricing: COS method (Fourier-cosine series expansion)
 
 ---
 
-## 🔬 Example Use Cases
+## Example Use Cases
 
 ### 1. Market Making Desk
 - Detect mispriced options via arbitrage checks
@@ -276,7 +276,7 @@ Pricing: COS method (Fourier-cosine series expansion)
 
 ---
 
-## 🛠️ Advanced Usage
+## Advanced Usage
 
 ### Custom Initial Guess for Heston
 
@@ -316,7 +316,7 @@ price = model.price_call_cos(S=100, K=105, T=0.5, r=0.02, N=128)
 
 ---
 
-## 📖 References
+## References
 
 - Gatheral & Jacquier (2014): "Arbitrage-free SVI volatility surfaces"
 - Fang & Oosterlee (2008): "A Novel Pricing Method for European Options Based on Fourier-Cosine Series Expansions"
@@ -325,7 +325,7 @@ price = model.price_call_cos(S=100, K=105, T=0.5, r=0.02, N=128)
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions welcome! Please:
 
@@ -337,13 +337,13 @@ Contributions welcome! Please:
 
 ---
 
-## 📄 License
+## License
 
 MIT License - see LICENSE file for details.
 
 ---
 
-## 👤 Author
+## Author
 
 **Alexander Robbins**  
 University of Florida | Math, CS, Economics  
@@ -352,14 +352,14 @@ University of Florida | Math, CS, Economics
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Inspired by Jim Gatheral's work on volatility surfaces
 - COS method implementation based on Fang & Oosterlee (2008)
 
 ---
 
-## 📈 Performance
+## Performance
 
 - **IV computation**: ~1ms per option (Newton-Raphson)
 - **SVI fitting**: ~50ms per expiry slice (L-BFGS-B)
@@ -370,7 +370,7 @@ University of Florida | Math, CS, Economics
 
 ---
 
-## 🐛 Known Issues
+## Known Issues
 
 - Very deep ITM/OTM options may fail IV convergence (returns NaN)
 - Heston calibration sensitive to initial guess (use `method='global'` if stuck)
@@ -378,7 +378,7 @@ University of Florida | Math, CS, Economics
 
 ---
 
-## 🗺️ Roadmap
+## Roadmap
 
 - [ ] Add SABR model calibration
 - [ ] Implement local volatility surface (Dupire)
