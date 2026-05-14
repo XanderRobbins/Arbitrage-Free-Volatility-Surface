@@ -1,6 +1,5 @@
-import matplotlib
-matplotlib.use('Agg')
 import pandas as pd
+import matplotlib.pyplot as plt
 from vol_surface import VolatilitySurface
 
 df = pd.read_csv('data/spy_options.csv')
@@ -10,36 +9,26 @@ surface.load_data(df)
 surface.compute_ivs()
 
 # Test smile plot
-import matplotlib.pyplot as plt
+print("Displaying smile plot...")
 surface.plot_smile(expiry=df['expiry'].iloc[0])
-import os
-import tempfile
-
-temp_dir = tempfile.gettempdir()
-
-plt.savefig(os.path.join(temp_dir, 'smile.png'))
-plt.close()
-print("OK - Smile plot saved")
+plt.show()
 
 # Test SVI fitting and surface
+print("Fitting SVI and displaying surface...")
 surface.fit_svi()
 surface.plot_surface_3d(model='svi')
-plt.savefig(os.path.join(temp_dir, 'svi_surface.png'))
-plt.close()
-print("OK - SVI surface plot saved")
+plt.show()
 
 # Plot raw market data (no fitting needed)
+print("Displaying market surface...")
 surface.plot_surface_3d(model='market')
-plt.savefig(os.path.join(temp_dir, 'market_surface.png'))
-plt.close()
-print("OK - Market surface plot saved")
+plt.show()
 
 # Test term structure
+print("Displaying term structure...")
 surface.term_structure(moneyness=1.0)
-plt.savefig(os.path.join(temp_dir, 'term_structure.png'))
-plt.close()
-print("OK - Term structure plot saved")
+plt.show()
 
 surface.summary()
-print("\nOK - All smoke tests passed!")
+print("\nOK - All plots displayed!")
 
